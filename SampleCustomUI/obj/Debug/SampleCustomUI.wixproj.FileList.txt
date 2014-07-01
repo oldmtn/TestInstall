@@ -1,0 +1,7 @@
+obj\Debug\SampleCustomUI6.wixobj
+obj\Debug\UI_Texts.wixobj
+D:\Programming\part_VC\TestInstall\SampleCustomUI\bin\Debug\SampleCustomUI.msi
+D:\Programming\part_VC\TestInstall\SampleCustomUI\bin\Debug\SampleCustomUI.wixpdb
+obj\Debug\SampleCustomUI.wixproj.BindContentsFileListnull.txt
+obj\Debug\SampleCustomUI.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SampleCustomUI.wixproj.BindBuiltOutputsFileListnull.txt

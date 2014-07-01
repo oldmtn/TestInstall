@@ -1,0 +1,2 @@
+D:\Programming\part_VC\TestInstall\SampleCustomUI\bin\Debug\SampleCustomUI.msi
+D:\Programming\part_VC\TestInstall\SampleCustomUI\bin\Debug\SampleCustomUI.wixpdb
