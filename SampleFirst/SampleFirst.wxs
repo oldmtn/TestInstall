@@ -9,7 +9,8 @@
 
     <Media Id='1' Cabinet='Sample.cab' EmbedCab='yes' DiskPrompt="CD-ROM #1" />
     <Property Id='DiskPrompt' Value="Acme's Foobar 1.0 Installation [1]" />
-
+    <Condition Message="You need to be an administrator to install this product.">AdminUser</Condition>
+    
     <Directory Id='TARGETDIR' Name='SourceDir'>
       <Directory Id='ProgramFilesFolder' Name='PFiles'>
         <Directory Id='Acme' Name='Acme'>
@@ -32,6 +33,11 @@
               </File>
             </Component>
 
+            <Component Id='FoobarLog' Guid='{7636C1E3-6CAB-41BC-96A6-7347429016EE}' KeyPath='yes'>
+              <CreateFolder />
+              <RemoveFile Id='LogFile' On='uninstall' Name='Foobar10.log' />
+            </Component>
+            
           </Directory>
         </Directory>
       </Directory>
@@ -53,6 +59,7 @@
       <ComponentRef Id='HelperLibrary' />
       <ComponentRef Id='Manual' />
       <ComponentRef Id='ProgramMenuDir' />
+      <ComponentRef Id='FoobarLog' />
     </Feature>
 
     <Icon Id="Foobar10.exe" SourceFile="FoobarAppl10.exe" />
