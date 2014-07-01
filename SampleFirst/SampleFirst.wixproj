@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.8</ProductVersion>
-    <ProjectGuid>dfb52d09-58fe-4649-ac98-c61ab351de03</ProjectGuid>
+    <ProjectGuid>{6223dd26-70cd-4323-ac23-96bc2afc6d86}</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>SampleFirst</OutputName>
     <OutputType>Package</OutputType>
@@ -21,7 +21,7 @@
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Product.wxs" />
+    <Compile Include="SampleFirst.wxs" />
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <!--
