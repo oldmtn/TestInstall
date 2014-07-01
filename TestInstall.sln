@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SampleCustomUI", "SampleCustomUI\SampleCustomUI.wixproj", "{C3A79041-8652-44F3-AE37-11632A24A5D0}"
 EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SampleFirst", "SampleFirst\SampleFirst.wixproj", "{6223DD26-70CD-4323-AC23-96BC2AFC6D86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{C3A79041-8652-44F3-AE37-11632A24A5D0}.Debug|x86.Build.0 = Debug|x86
 		{C3A79041-8652-44F3-AE37-11632A24A5D0}.Release|x86.ActiveCfg = Release|x86
 		{C3A79041-8652-44F3-AE37-11632A24A5D0}.Release|x86.Build.0 = Release|x86
+		{6223DD26-70CD-4323-AC23-96BC2AFC6D86}.Debug|x86.ActiveCfg = Debug|x86
+		{6223DD26-70CD-4323-AC23-96BC2AFC6D86}.Debug|x86.Build.0 = Debug|x86
+		{6223DD26-70CD-4323-AC23-96BC2AFC6D86}.Release|x86.ActiveCfg = Release|x86
+		{6223DD26-70CD-4323-AC23-96BC2AFC6D86}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

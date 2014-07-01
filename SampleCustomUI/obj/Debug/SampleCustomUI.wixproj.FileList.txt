@@ -5,3 +5,5 @@ D:\Programming\part_VC\TestInstall\SampleCustomUI\bin\Debug\SampleCustomUI.wixpd
 obj\Debug\SampleCustomUI.wixproj.BindContentsFileListnull.txt
 obj\Debug\SampleCustomUI.wixproj.BindOutputsFileListnull.txt
 obj\Debug\SampleCustomUI.wixproj.BindBuiltOutputsFileListnull.txt
+D:\Programming\part_VC\TestInstall\bin\Debug\SampleCustomUI.msi
+D:\Programming\part_VC\TestInstall\bin\Debug\SampleCustomUI.wixpdb
