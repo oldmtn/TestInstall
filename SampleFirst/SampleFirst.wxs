@@ -37,6 +37,20 @@
               <CreateFolder />
               <RemoveFile Id='LogFile' On='uninstall' Name='Foobar10.log' />
             </Component>
+
+            <Component Id='FoobarRegistry' Guid='{BB6AD1A9-49C8-4B32-8F6D-93A45C50A482}'>
+              <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Name='InstallDir' Value='[INSTALLDIR]' KeyPath='yes' />
+              <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Name='ProgramFileFolder' Value='[ProgramFilesFolder]' />
+              <RegistryValue Root='HKLM' Key='Software\[Manufacturer]\[ProductName]' Type='string' Name='InstallDir' Value='[INSTALLDIR]' />
+              <!--
+              <Registry Id='FoobarRegInstallDir' Root='HKLM' Key='Software\Acme\Foobar 1.0' Name='InstallDir'
+                        Action='write' Type='multiString'>
+                <RegistryValue>[TARGETDIR]</RegistryValue>
+                <RegistryValue>[INSTALLDIR]</RegistryValue>
+                <RegistryValue>[ProgramFilesFolder]</RegistryValue>
+              </Registry>
+              -->
+            </Component>
             
           </Directory>
         </Directory>
@@ -60,6 +74,7 @@
       <ComponentRef Id='Manual' />
       <ComponentRef Id='ProgramMenuDir' />
       <ComponentRef Id='FoobarLog' />
+      <ComponentRef Id='FoobarRegistry' />
     </Feature>
 
     <Icon Id="Foobar10.exe" SourceFile="FoobarAppl10.exe" />
