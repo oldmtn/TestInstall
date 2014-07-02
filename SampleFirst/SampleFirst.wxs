@@ -36,6 +36,7 @@
             <Component Id="Component_Id_ReadMe" Guid="{3CDDD61C-6B3B-4FEA-AB5A-A1A59B825E80}">
               <File Id="ReadMe.txt" Name="ReadMe.txt" DiskId="1" Source="ReadMe.txt" KeyPath="yes"/>
             </Component>
+            
 
             <Component Id='FoobarLog' Guid='{7636C1E3-6CAB-41BC-96A6-7347429016EE}' KeyPath='yes'>
               <CreateFolder />
@@ -51,6 +52,14 @@
             <Component Id="FoobarRegistry_HKLM" Guid="0927B7FA-08A3-428f-A800-CD1CE677BC34" >
               <Registry Id="TestHKLM" Root="HKLM" Key="Software\[Manufacturer]\[ProductName]" Name="TestInteger" Type="integer" Value="0" />
             </Component>
+
+            <Directory Id="TestInstallFolder" Name="TestInstallFolder">
+              <Component Id="Component_TestInstallFolder" Guid="{AE37781B-3363-46BA-A464-BBEB11E63699}"
+                SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no"
+                Win64="no" Location="either">
+                <CreateFolder/>
+              </Component>
+            </Directory>
             
           </Directory>
         </Directory>
@@ -77,6 +86,7 @@
       <ComponentRef Id='FoobarLog' />
       <ComponentRef Id='FoobarRegistry' />
       <ComponentRef Id='FoobarRegistry_HKLM' />
+      <ComponentRef Id='Component_TestInstallFolder'/>
     </Feature>
       
     <Icon Id="Foobar10.exe" SourceFile="FoobarAppl10.exe" />

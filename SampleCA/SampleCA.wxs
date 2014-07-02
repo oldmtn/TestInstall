@@ -76,18 +76,25 @@
     </UI>
     <UIRef Id="WixUI_ErrorProgressText" />
 
+    <!-- Begin - Property -->
     <Property Id="PIDTemplate"><![CDATA[12345<### ###>@@@@@]]></Property>
-
+    <Property Id='PIDKEY' Hidden='yes'/>
+    <!-- End - Property -->
+    
+    <!-- Begin - CustomAction -->
     <CustomAction Id="CheckingPID" BinaryKey="CheckPID" DllEntry="CheckPID" />
     <CustomAction Id="RefusePID" Error="Invalid key. Installation aborted." />
-
+    <!-- End - CustomAction -->
+    
     <InstallExecuteSequence>
       <Custom Action="CheckingPID" After="CostFinalize" >NOT Installed</Custom>
       <Custom Action="RefusePID" After="CheckingPID">PIDACCEPTED = "0" AND NOT Installed</Custom>
     </InstallExecuteSequence>
 
+    <!-- Begin - Resource -->
     <Binary Id="CheckPID" SourceFile="..\bin\Debug\CheckPID.dll" />
     <Icon Id="Foobar10.exe" SourceFile="FoobarAppl10.exe" />
-
+    <!-- End - Resource -->
+    
   </Product>
 </Wix>
