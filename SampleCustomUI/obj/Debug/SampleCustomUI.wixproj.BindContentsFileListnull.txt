@@ -1,3 +1,0 @@
-FoobarAppl10.exe
-Helper.dll
-Manual.pdf

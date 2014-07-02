@@ -82,7 +82,7 @@
     <CustomAction Id="RefusePID" Error="Invalid key. Installation aborted." />
 
     <InstallExecuteSequence>
-      <Custom Action="CheckingPID" After="CostFinalize" />
+      <Custom Action="CheckingPID" After="CostFinalize" >NOT Installed</Custom>
       <Custom Action="RefusePID" After="CheckingPID">PIDACCEPTED = "0" AND NOT Installed</Custom>
     </InstallExecuteSequence>
 
