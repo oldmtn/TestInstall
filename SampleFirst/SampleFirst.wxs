@@ -33,6 +33,10 @@
               </File>
             </Component>
 
+            <Component Id="Component_Id_ReadMe" Guid="{3CDDD61C-6B3B-4FEA-AB5A-A1A59B825E80}">
+              <File Id="ReadMe.txt" Name="ReadMe.txt" DiskId="1" Source="ReadMe.txt" KeyPath="yes"/>
+            </Component>
+
             <Component Id='FoobarLog' Guid='{7636C1E3-6CAB-41BC-96A6-7347429016EE}' KeyPath='yes'>
               <CreateFolder />
               <RemoveFile Id='LogFile' On='uninstall' Name='Foobar10.log' />
@@ -68,6 +72,7 @@
       <ComponentRef Id='MainExecutable' />
       <ComponentRef Id='HelperLibrary' />
       <ComponentRef Id='Manual' />
+      <ComponentRef Id='Component_Id_ReadMe' />
       <ComponentRef Id='ProgramMenuDir' />
       <ComponentRef Id='FoobarLog' />
       <ComponentRef Id='FoobarRegistry' />
@@ -76,7 +81,8 @@
       
     <Icon Id="Foobar10.exe" SourceFile="FoobarAppl10.exe" />
 
-    <CustomAction Id="LaunchFile" FileKey="FoobarEXE" ExeCommand="" Return="asyncNoWait"/>
+    <Property Id='NOTEPAD'>Notepad.exe</Property>
+    <CustomAction Id='LaunchFile' Property='NOTEPAD' ExeCommand='[INSTALLDIR]\Readme.txt' Return='asyncNoWait'/>
     <InstallExecuteSequence>
       <Custom Action="LaunchFile" After="InstallFinalize">NOT Installed</Custom>
     </InstallExecuteSequence>
